@@ -13,6 +13,8 @@ $fourth = $thirdToFourth / 100 - ($thirdToFourth % 100) / 100;
 $fourToFifth = $thirdToFourth - $fourth * 100;
 $fifth = $fourToFifth / 10 - ($fourToFifth % 10) / 10;
 $six = $fourToFifth - $fifth * 10;
-echo 'With number: ';
-print_r($number);
-echo ', '.$first.', '.$second.', '.$third.', '.$fourth.', '.$fifth.', '.$six;
+if ($first + $second + $third == $fourth + $fifth + $six){
+    echo 'да';
+} else {
+    echo 'нет';
+}
