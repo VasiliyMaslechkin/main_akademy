@@ -1,0 +1,32 @@
+CREATE TABLE `Users` (
+    `id` int,
+    `name` varchar(255),
+    `email` varchar(255),
+    `password` varchar(255),
+    `token` varchar(255), 
+    `start` timestamp
+);
+
+CREATE TABLE `Goods` (
+    `id` int,
+    `name` varchar(255),
+    `text` varchar(255),
+    `alias` varchar(255),
+    `img` varchar(255),
+    `show` int, 
+    `start` timestamp
+);
+
+CREATE TABLE `Coments` (
+    `id` int,
+    `id_user` int,
+    `id_goods` int,
+    `name` varchar(255),
+    `email` varchar(255),
+    `parent` varchar(255),
+    `start` timestamp
+);
+
+ALTER TABLE `Users` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `Coments` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `Goods` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
